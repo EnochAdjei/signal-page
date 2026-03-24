@@ -1,0 +1,186 @@
+:root {
+  --color-primary: #0285e4;
+  --color-secondary: #f3cd03;
+  --color-accent: #112d57;
+  --color-heading: #000000;
+  --color-body: #5c5c5c;
+  --color-light: #ffffff;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  color: var(--color-body);
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-heading);
+  line-height: 4.8rem;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+h3 {
+  font-size: 2.4rem;
+}
+
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 5.4rem;
+  }
+}
+
+/* COMPONENTS */
+/* Block */
+.container {
+  max-width: 1102px;
+  margin: 0 auto;
+}
+
+/* Link */
+a {
+  text-decoration: none;
+}
+
+/* Button */
+.btn {
+  padding: 1.4rem 4.6rem;
+  border-radius: 5rem;
+  font-size: 1.8rem;
+  text-transform: capitalize;
+  display: inline-block;
+}
+
+.btn--lg {
+  padding: 1.4rem 8rem;
+}
+
+.btn--primary {
+  background-color: var(--color-primary);
+  color: var(--color-light);
+}
+
+/* List */
+.list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.collapsible__content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s;
+}
+
+.collapsible--expanded .collapsible__content {
+  max-height: 100%;
+}
+
+/* SECTIONS */
+
+/* Navbar */
+.nav__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav__items {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.humburger {
+  font-size: 4rem;
+}
+
+.nav__list {
+  width: 100%;
+}
+
+.nav__list .list__item {
+  border-bottom: 1px solid var(--color-body);
+  margin-bottom: 1rem;
+  padding-bottom: 0.6rem;
+}
+
+.nav__list .list__item > a {
+  color: var(--color-heading);
+  font-size: 1.8rem;
+}
+
+@media screen and (min-width: 768px) {
+  .humburger {
+    display: none;
+  }
+
+  .nav__items {
+    order: 3;
+  }
+
+  .nav__list {
+    width: auto;
+    max-height: 100%;
+    display: flex;
+    gap: 4.5rem;
+    order: 2;
+  }
+
+  .nav__list .list__item {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+}
+
+.hero__heading {
+  max-width: 324px;
+  margin: 8.5rem auto 0 auto;
+}
+
+.hero__text {
+  max-width: 490px;
+  margin: 2rem auto 8.5rem auto;
+}
+
+.hero__image {
+  width: 100%;
+  margin-top: 8.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .hero__heading {
+    max-width: 664px;
+    margin: 15rem auto 5rem auto;
+  }
+
+  .hero__text {
+    max-width: 577px;
+    margin: 2rem auto 8.5rem auto;
+  }
+
+  .hero__image {
+    width: 80%;
+    margin-top: 1rem;
+  }
+}
