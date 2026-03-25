@@ -44,6 +44,15 @@ h3 {
 
 /* COMPONENTS */
 /* Block */
+
+.block {
+  padding: 10rem 4.5rem;
+}
+
+.block--rightSkew {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 0% 100%);
+}
+
 .container {
   max-width: 1102px;
   margin: 0 auto;
@@ -70,6 +79,11 @@ a {
 .btn--primary {
   background-color: var(--color-primary);
   color: var(--color-light);
+}
+
+.btn--primary:hover {
+  background-color: #0477ca;
+  transition: background-color 0.3s;
 }
 
 /* List */
@@ -155,7 +169,7 @@ a {
 
 .hero__heading {
   max-width: 324px;
-  margin: 8.5rem auto 0 auto;
+  margin: 0 auto;
 }
 
 .hero__text {
@@ -171,7 +185,7 @@ a {
 @media screen and (min-width: 768px) {
   .hero__heading {
     max-width: 664px;
-    margin: 15rem auto 5rem auto;
+    margin: 5.5rem auto 0 auto;
   }
 
   .hero__text {
